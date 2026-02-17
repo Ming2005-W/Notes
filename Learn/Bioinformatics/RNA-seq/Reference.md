@@ -3,8 +3,7 @@
 
 ### Reproduction on Paper
 [Drug-perturbation-based stratification of blood cancer](https://pubmed.ncbi.nlm.nih.gov/29227286/)
-$~~~$ Reproduced with protocol in
-$~~~~~~$ [BloodCancerMultiOmics2017 - complete analysis](https://www.bioconductor.org/packages/release/data/experiment/vignettes/BloodCancerMultiOmics2017/inst/doc/BloodCancerMultiOmics2017.html)
+$~~~$ -Reproduced with protocol in [BloodCancerMultiOmics2017](https://www.bioconductor.org/packages/release/data/experiment/vignettes/BloodCancerMultiOmics2017/inst/doc/BloodCancerMultiOmics2017.html)
 
 ### Protocol
 [Analyzing RNA-seq data with DESeq2
