@@ -8,3 +8,8 @@ $~~~$ -Reproduced with protocol in [BloodCancerMultiOmics2017](https://www.bioco
 ### Protocol
 [Analyzing RNA-seq data with DESeq2
 ](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
+[PennVet Center for Host-Microbial Interactions (CHMI)](https://protocols.hostmicrobe.org/)
+
+### Online E-Book
+[NGS Analysis](https://learn.gencore.bio.nyu.edu/)
+[Computational Genomics with R](https://compgenomr.github.io/book/)
