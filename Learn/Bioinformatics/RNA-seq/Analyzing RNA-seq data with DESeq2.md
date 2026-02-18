@@ -34,7 +34,9 @@ Transcript abundance estimation under this method will:
 
     [Salmon](https://combine-lab.github.io/salmon/getting_started/)
 
-##### Demonstration of transcript abundance import and gene-level DESeqDataSet object construct from Salmon `quant.sf`
+$~$
+
+##### Transcript abundance import and gene-level DESeqDataSet object construct from Salmon `quant.sf`
 ```[R]
 library("tximport")
 library("readr")
@@ -74,3 +76,28 @@ ddsTxi <- DESeqDataSetFromTximport(txi,
                                    colData = samples,
                                    design = ~ condition)
 ```
+$~$
+
+#####  Transcript abundance import from Tximeta with automatic metadata
+Tximeta (Love et al. 2020) extends tximport, offering the same functionality. Additional benefit is automatic addition of annotation metadata for commonly used transcriptomes.
+
+Tximeta produces a S`ummarizedExperiment` that can be loaded into DESeq2.
+```
+coldata <- samples
+coldata$files <- files
+coldata$names <- coldata$run
+
+## Loads the tximeta package, which automates transcript-to-gene mapping and adds annotation metadata
+library("tximeta") 
+
+## Reads the transcript abundance data from the Salmon files
+## Maps transcript-level counts to genes
+## Returns a SummarizedExperiment object containing gene-level counts and automatic metadata
+se <- tximeta(coldata)
+
+##Convert SummarizedExperiment into DESeqDataSet with a design formula based on the condition variable
+ddsTxi <- DESeqDataSet(se, design = ~ condition)
+```
+
+$~$
+#### Count matrix input
